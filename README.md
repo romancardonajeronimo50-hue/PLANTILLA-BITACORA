@@ -1,0 +1,18 @@
+22/10/2025Jeronimo Román Cardona.Configuracion Del Entorno De Progamacion,
+Error 1: ..venv\Scripts\activate
+Descripción: PowerShell no reconoce el comando para activar el entorno virtual de Python.
+Causa: Estás en una ruta distinta a donde está la carpeta .venv, o PowerShell bloquea la ejecución de scripts por seguridad.
+Solución: Asegúrate de estar en la carpeta del proyecto donde está .venv y ejecuta en PowerShell los comandos: “Set-ExecutionPolicy
+ -ExecutionPolicy RemoteSigned -Scope CurrentUser” y luego “..venv\Scripts\Activate.ps1”.
+Resultado: El entorno virtual se activa correctamente y aparece “(.venv)” antes del PS en la terminal.
+Notas: Siempre activa el entorno antes de instalar librerías. Si usas CMD en lugar de PowerShell, el comando cambia a “.venv\Scripts\activate”.
+Error2:pip install pandas
+No me aparecio errores,fue exitoso
+Error 3: matplotlib
+Descripción: PowerShell no reconoce el comando “matplotlib”.
+Causa: Se intentó ejecutar una librería de Python como si fuera un comando del sistema.
+Solución: Instala la librería correctamente con “pip install matplotlib” y luego úsala dentro de un archivo de Python con el código
+ “import matplotlib.pyplot as plt”, “plt.plot([1, 2, 3], [4, 5, 6])”, y “plt.show()”.
+Resultado: Matplotlib se instala correctamente y puedes crear gráficos dentro de Python sin errores.
+Notas: No ejecutes nombres de librerías directamente en PowerShell, solo funcionan dentro de archivos Python (.py) o en el intérprete escribiendo
+ “python” antes de los comandos.
